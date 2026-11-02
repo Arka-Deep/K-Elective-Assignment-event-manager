@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventify - Find Your Next Experience</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+
+    <!-- Scripts (deferred so they load after HTML parses) -->
+    <!-- theme.js is loaded first to apply dark/light mode before rendering -->
+    <script src="js/theme.js" defer></script>
+    <script src="js/data.js" defer></script>
+    <script src="js/home.js" defer></script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Eventify</div>
+        <button id="theme-toggle" class="btn-theme" aria-label="Toggle Dark Mode">
+            🌓 Toggle Theme
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Discover Amazing Events</h1>
+            <p>Explore, register, and experience the best events around you.</p>
+            <a href="#events-section" class="btn-primary">Browse Events</a>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main id="events-section" class="container">
+        
+        <!-- Search and Filters -->
+        <section class="filters-container">
+            <input type="text" id="search-input" placeholder="Search events by name..." class="search-bar">
+            
+            <div id="category-filters" class="category-buttons">
+                <!-- JavaScript will generate category buttons here or you can hardcode them -->
+                <button class="btn-filter active" data-category="all">All</button>
+                <button class="btn-filter" data-category="tech">Tech</button>
+                <button class="btn-filter" data-category="music">Music</button>
+                <button class="btn-filter" data-category="workshop">Workshop</button>
+            </div>
+        </section>
+
+        <!-- Dynamic Event Grid -->
+        <section id="event-grid" class="grid">
+            <!-- JavaScript (home.js) will inject the event cards here -->
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Eventify. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

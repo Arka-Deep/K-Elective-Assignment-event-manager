@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details - Eventify</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+
+    <!-- Scripts (deferred so they load after HTML parses) -->
+    <script src="js/theme.js" defer></script>
+    <script src="js/data.js" defer></script>
+    <script src="js/event.js" defer></script>
+    <script src="js/form.js" defer></script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">Eventify</a>
+        <div class="nav-actions">
+            <a href="index.html" class="btn-secondary">← Back to Events</a>
+            <button id="theme-toggle" class="btn-theme" aria-label="Toggle Dark Mode">
+                🌓 Toggle Theme
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        
+        <!-- Confirmation Toast / Message (Hidden by default) -->
+        <div id="confirmation-message" class="toast hidden">
+            <p>🎉 Registration Successful! We've saved your spot.</p>
+        </div>
+
+        <!-- Dynamic Event Header & Banner -->
+        <section id="event-header" class="event-header">
+            <img id="event-image" src="" alt="Event Banner" class="event-banner-img">
+            <div class="event-header-info">
+                <span id="event-category" class="badge">Category</span>
+                <h1 id="event-title">Loading Event...</h1>
+                <p id="event-date-location" class="meta-info">📅 Date | 📍 Venue</p>
+            </div>
+        </section>
+
+        <div class="event-details-layout">
+            
+            <!-- Left Column: Details & Countdown -->
+            <article class="event-info-section">
+                <h2>About This Event</h2>
+                <p id="event-description">Loading event description...</p>
+                
+                <!-- Countdown Timer (Bonus Challenge) -->
+                <div class="countdown-card">
+                    <h3>Event Starts In</h3>
+                    <div id="countdown-timer" class="timer-grid">
+                        <div class="timer-box"><span id="days">00</span><label>Days</label></div>
+                        <div class="timer-box"><span id="hours">00</span><label>Hours</label></div>
+                        <div class="timer-box"><span id="minutes">00</span><label>Minutes</label></div>
+                        <div class="timer-box"><span id="seconds">00</span><label>Seconds</label></div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Right Column: Registration Form -->
+            <aside class="registration-card">
+                <h2>Register Now</h2>
+                <form id="registration-form" novalidate>
+                    <!-- Hidden field to hold event ID -->
+                    <input type="hidden" id="event-id-input" name="eventId">
+
+                    <div class="form-group">
+                        <label for="full-name">Full Name *</label>
+                        <input type="text" id="full-name" name="fullName" placeholder="Jane Doe" required>
+                        <small class="error-msg" id="name-error"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+                        <small class="error-msg" id="email-error"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="1234567890" required>
+                        <small class="error-msg" id="phone-error"></small>
+                    </div>
+
+                    <button type="submit" class="btn-primary btn-block">Confirm Registration</button>
+                </form>
+            </aside>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Eventify. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
