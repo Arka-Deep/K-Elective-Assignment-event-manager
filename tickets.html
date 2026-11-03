@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Registrations - Eventify</title>
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <a href="index.html" class="logo">Eventify</a>
+        <div class="nav-actions">
+            <a href="index.html" class="btn-secondary">Browse Events</a>
+            <button id="theme-toggle" class="btn-theme">🌙 Dark Mode</button>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+            <div>
+                <h1>My Registered Tickets</h1>
+                <p>View and manage all your active event registrations.</p>
+            </div>
+            <button id="clear-all-btn" class="btn-secondary" style="display: none;">Clear All Tickets</button>
+        </div>
+
+        <!-- Ticket List Container -->
+        <div id="tickets-container" class="grid">
+            <!-- Dynamically populated via js/tickets.js -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Eventify. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/theme.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/tickets.js"></script>
+</body>
+</html>
